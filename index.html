@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	<meta charset="utf-8">
+	<title>node.org.il</title>
+	<meta name="description" content="node.org.il">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css">
+	<link rel="stylesheet" href="http://dropthebit.com/demos/photobox/styles.css">
+	<link rel="stylesheet" href="http://dropthebit.com/demos/photobox/photobox/photobox.css">
+	<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id='wrap'>
+		<header>
+			<h1>node.org.il - Home for node.js in Israel</h1>
+			<p>TBA</p>
+		</header>
+		<div id='gallery'></div>
+	</div>
+
+	<script src='js/photobox.js'></script>
+	<script>
+!(function(){
+    'use strict';
+    var data = ["http://nodejs.org/logo.png", "http://nodejs.org/images/logos/nodejs.png", "http://nodejs.org/images/logos/nodejs-dark.png", "http://nodejs.org/images/logos/nodejs-green.png", "http://nodejs.org/images/logos/nodejs-black.png", "http://nodejs.org/images/logos/monitor.png"];
+    var gallery = $('#gallery');
+    $.each(data, function (index, url) {
+        var img = $('<img>').prop({'src': url});
+        var link = $('<a rel="gallery">')
+                    .append( img )
+                    .prop('href', url)
+                    .appendTo(gallery);
+        // lazy show the photos one by one
+        img.on('load', function(e){
+            setTimeout( function(){ link.addClass('loaded'); }, 20*index);
+        });
+    });
+    
+    // finally, initialize photobox on all retrieved images
+    $('#gallery').find('a').photobox({ thumbs:true });
+})();
+</script>
+</body>
+
+</html>
