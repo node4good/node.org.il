@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 	<meta charset="utf-8">
 	<title>node.org.il</title>
@@ -13,10 +14,10 @@
 	<!--[if lt IE 9]><link rel="stylesheet" href="css/photobox.ie.css"><![endif]-->
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 	<script src='js/photobox.js'></script>
-    <script type="text/javascript">
 
+    <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-15378843-13']);
       _gaq.push(['_trackPageview']);
@@ -26,12 +27,11 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
-
 </head>
 
 <body>
+
 	<div id='wrap'>
 		<header>
 			<h1>node.org.il - Home for node.js in Israel</h1>
@@ -40,8 +40,8 @@
 		<ul id='gallery'></ul>
 	</div>
 
-	<script>
-!(function(){
+<script>
+$(function(){
     'use strict';
     var data = ["http://nodejs.org/logo.png", "http://nodejs.org/images/logos/nodejs.png", "http://nodejs.org/images/logos/nodejs-dark.png", "http://nodejs.org/images/logos/nodejs-green.png", "http://nodejs.org/images/logos/nodejs-black.png", "http://nodejs.org/images/logos/monitor.png"];
     var gallery = $('#gallery');
@@ -54,20 +54,15 @@
             link.appendChild(this);
             li.appendChild(link);
             gallery[0].appendChild(li);
-        
-            setTimeout(function(){ 
-                li.className = 'loaded'; 
-            }, 200 * index);
+            setTimeout(function(){ li.className = 'loaded'; }, 200 * index);
         };
-        
         img.src = url;
     });
     
     // finally, initialize photobox on all retrieved images
     $('#gallery').photobox('a', { thumbs:true });
-})();
+})
 </script>
 
 </body>
-
 </html>
