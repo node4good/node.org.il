@@ -1,5 +1,5 @@
-node.org.il
+node4good
 ===========
 
-Home for node.js in Israel
+Home for some node.js projects that do good
 

@@ -2,7 +2,7 @@
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
 
 html{ height:100%; overflow-y:scroll; }
-body{ font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; box-shadow:0 0 0 10px rgba(255,255,255,0.1) inset; min-height:100%; padding:0; background:url('bg2.jpg') 50% 50% fixed no-repeat; background-size:cover; -webkit-background-size:100% 100%; -webkit-animation:8s bg forwards ease; }
+body{ font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; box-shadow:0 0 0 10px rgba(255,255,255,0.1) inset; min-height:100%; padding:0; background:url('bg2.png') 50% 50% fixed no-repeat; background-size:cover; -webkit-background-size:100% 100%; -webkit-animation:8s bg forwards ease; }
 
 @-webkit-keyframes bg{ 
 	0%{ background-size:120% 120%; }
